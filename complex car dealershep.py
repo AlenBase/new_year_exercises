@@ -111,8 +111,7 @@ class SalesPeople(SalesOperation):
             print(f"{car_info}\n{customer_info}\n{comission_info}\n{'='*30}")
             
 
-
-def main():
+if __name__ == '__main__':
     electric_car = ElectricCar('Volkswagen','ID4',35000, 300)
     hybrid_car = HybridCar('Toyota','Prius',23000, 50)
     
@@ -140,4 +139,4 @@ def main():
     dealership.display_inventory()
     
 if __name__ == '__main__':
-    main()
+    
