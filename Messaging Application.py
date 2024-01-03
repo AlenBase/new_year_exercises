@@ -65,23 +65,23 @@ class MessagingApp:
         for message in conversation.history:
             message.display()
 
+if __name__ == "__main__":
 
-
-app = MessagingApp()
-
-user1 = app.create_user("Gevorg", "gevorg@yandex.com")
-user2 = app.create_user("Larisa", "larisa@gmail.com")
-user3 = app.create_user("Anjelika", "anjelika@mail.ru")
-
-conversation1 = app.create_conversation([user1, user2])
-conversation2 = app.create_conversation([user1, user3])
-
-message1 = app.send_message(user1, conversation1, "Hello, Gevorg!")
-message2 = app.send_message(user2, conversation1, "Hi, Larisa!")
-message3 = app.send_message(user1, conversation2, "Hey, Lika!")
-
-print("Conversation 1:")
-app.display_conversation_history(conversation1)
-
-print("\nConversation 2:")
-app.display_conversation_history(conversation2)
+    app = MessagingApp()
+    
+    user1 = app.create_user("Gevorg", "gevorg@yandex.com")
+    user2 = app.create_user("Larisa", "larisa@gmail.com")
+    user3 = app.create_user("Anjelika", "anjelika@mail.ru")
+    
+    conversation1 = app.create_conversation([user1, user2])
+    conversation2 = app.create_conversation([user1, user3])
+    
+    message1 = app.send_message(user1, conversation1, "Hello, Gevorg!")
+    message2 = app.send_message(user2, conversation1, "Hi, Larisa!")
+    message3 = app.send_message(user1, conversation2, "Hey, Lika!")
+    
+    print("Conversation 1:")
+    app.display_conversation_history(conversation1)
+    
+    print("\nConversation 2:")
+    app.display_conversation_history(conversation2)
