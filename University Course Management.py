@@ -60,7 +60,7 @@ class Professor:
     def manage_course(self, course):
         print(f"{self.name} is managing the course - {course.name}")
 
-# Example Usage
+
 if __name__ == "__main__":
     undergrad_course = UndergraduateCourse("Introduction to Python", "Dr. Smith", "Basic Python concepts")
     grad_course = GraduateCourse("Advanced Machine Learning", "Prof. Johnson", "Deep learning and advanced ML techniques")
