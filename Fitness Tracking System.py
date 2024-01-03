@@ -47,15 +47,15 @@ class WorkoutPlan:
         for exercise in self.exercises:
             exercise.perform()
         print(f"Plan Duration: {self.duration} minutes")
-
-user1 = User("Irina", "irina@yandex.com")
-cardio_exercise = CardioExercise("Running", 30, "High", "Legs")
-strength_exercise = StrengthExercise("Bench Press", 3, 10, "Chest")
-
-user1.add_favorite_exercise(cardio_exercise)
-user1.add_favorite_exercise(strength_exercise)
-
-favorite_exercises = user1.favorite_exercises
-
-workout_plan = WorkoutPlan(user1, favorite_exercises, 60)
-workout_plan.display_plan()
+if __name__ == "__main__":
+    user1 = User("Irina", "irina@yandex.com")
+    cardio_exercise = CardioExercise("Running", 30, "High", "Legs")
+    strength_exercise = StrengthExercise("Bench Press", 3, 10, "Chest")
+    
+    user1.add_favorite_exercise(cardio_exercise)
+    user1.add_favorite_exercise(strength_exercise)
+    
+    favorite_exercises = user1.favorite_exercises
+    
+    workout_plan = WorkoutPlan(user1, favorite_exercises, 60)
+    workout_plan.display_plan()
