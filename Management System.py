@@ -94,16 +94,17 @@ class HotelBookingSystem:
         else:
             print("No reservation history found for this guest.")
 
-hotel = HotelBookingSystem()
-
-standard_room1 = StandardRoom(101)
-deluxe_room1 = DeluxeRoom(201)
-
-hotel.add_room(standard_room1)
-hotel.add_room(deluxe_room1)
-
-guest1 = Guest("Vazgen", "vazgen@gmail.com")
-
-hotel.book_room(guest1, standard_room1, datetime(2024, 1, 10), datetime(2024, 1, 15))
-
-# hotel.view_reservation_history(guest1)
+if __name__ == "__main__":
+    hotel = HotelBookingSystem()
+    
+    standard_room1 = StandardRoom(101)
+    deluxe_room1 = DeluxeRoom(201)
+    
+    hotel.add_room(standard_room1)
+    hotel.add_room(deluxe_room1)
+    
+    guest1 = Guest("Vazgen", "vazgen@gmail.com")
+    
+    hotel.book_room(guest1, standard_room1, datetime(2024, 1, 10), datetime(2024, 1, 15))
+    
+    # hotel.view_reservation_history(guest1)
