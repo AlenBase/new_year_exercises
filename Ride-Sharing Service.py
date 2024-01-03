@@ -74,17 +74,19 @@ class Ride:
         print(f"Fare: ${self.fare}")
         self.passenger.rate_driver(self.driver)
 
-car = Car("Toyota", "Camry")
-motorcycle = Motorcycle("Honda", "XYZ")
+if __name__ == "__main__":
 
-driver1 = Driver("Pique", "469-861-9364", car)
-driver2 = Driver("Hacob", "234-751-9356", motorcycle)
-
-passenger1 = Passenger("Marin", "138-462-1647")
-passenger2 = Passenger("Johan", "267-567-1963")
-
-ride1 = passenger1.request_ride(driver1, "Airport")
-driver1.complete_ride(ride1)
-
-ride2 = passenger2.request_ride(driver2, "Downtown")
-driver2.complete_ride(ride2)
+    car = Car("Toyota", "Camry")
+    motorcycle = Motorcycle("Honda", "XYZ")
+    
+    driver1 = Driver("Pique", "469-861-9364", car)
+    driver2 = Driver("Hacob", "234-751-9356", motorcycle)
+    
+    passenger1 = Passenger("Marin", "138-462-1647")
+    passenger2 = Passenger("Johan", "267-567-1963")
+    
+    ride1 = passenger1.request_ride(driver1, "Airport")
+    driver1.complete_ride(ride1)
+    
+    ride2 = passenger2.request_ride(driver2, "Downtown")
+    driver2.complete_ride(ride2)
