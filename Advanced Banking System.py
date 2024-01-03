@@ -50,20 +50,20 @@ class Transaction:
             return "Invalid transaction type"
 
         return f"Transaction successful. New balance: {self.account.balance}"
-
-individual_account = IndividualAccount(account_number="114561", balance=35000, account_type="Checking")
-joint_account = JointAccount(account_number="598462", balance=10000, account_type="Savings")
-
-customer = Customer(name="Artyom", contact_info="555-741-6953")
-customer.add_account(individual_account)
-customer.add_account(joint_account)
-
-print(customer.view_accounts())
-
-transaction = Transaction(account=individual_account, amount=1000, transaction_type="deposit")
-print(transaction.execute())
-
-transaction = Transaction(account=individual_account, amount=3000, transaction_type="withdrawal")
-print(transaction.execute())
-
-print(customer.view_accounts())
+if __name__ == "__main__":
+    individual_account = IndividualAccount(account_number="114561", balance=35000, account_type="Checking")
+    joint_account = JointAccount(account_number="598462", balance=10000, account_type="Savings")
+    
+    customer = Customer(name="Artyom", contact_info="555-741-6953")
+    customer.add_account(individual_account)
+    customer.add_account(joint_account)
+    
+    print(customer.view_accounts())
+    
+    transaction = Transaction(account=individual_account, amount=1000, transaction_type="deposit")
+    print(transaction.execute())
+    
+    transaction = Transaction(account=individual_account, amount=3000, transaction_type="withdrawal")
+    print(transaction.execute())
+    
+    print(customer.view_accounts())
