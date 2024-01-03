@@ -92,23 +92,24 @@ class Restaurant:
         self.reviews.append(review)
         return review
 
+if __name__ == "__main__":
 
-appetizer1 = Appetizer("Spring Rolls", 5.99, ["Cabbage", "Carrot", "Pork"], "Small")
-entree1 = Entree("Chicken Curry", 12.99, ["Chicken", "Potatoes", "Curry Sauce"], "Medium")
-
-customer1 = Customer("Chechen", "chechen@mail.ru")
-
-restaurant = Restaurant()
-
-restaurant.add_menu_item(appetizer1)
-restaurant.add_menu_item(entree1)
-
-restaurant.display_menu()
-
-order1 = restaurant.place_order(customer1, [appetizer1, entree1])
-
-restaurant.view_order_history(customer1)
-
-review1 = restaurant.leave_review(customer1, 4, "Great food!")
+    appetizer1 = Appetizer("Spring Rolls", 5.99, ["Cabbage", "Carrot", "Pork"], "Small")
+    entree1 = Entree("Chicken Curry", 12.99, ["Chicken", "Potatoes", "Curry Sauce"], "Medium")
+    
+    customer1 = Customer("Chechen", "chechen@mail.ru")
+    
+    restaurant = Restaurant()
+    
+    restaurant.add_menu_item(appetizer1)
+    restaurant.add_menu_item(entree1)
+    
+    restaurant.display_menu()
+    
+    order1 = restaurant.place_order(customer1, [appetizer1, entree1])
+    
+    restaurant.view_order_history(customer1)
+    
+    review1 = restaurant.leave_review(customer1, 4, "Great food!")
 
 review1.display()
