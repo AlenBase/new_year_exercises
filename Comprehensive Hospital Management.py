@@ -60,19 +60,19 @@ class CheckUp(MedicalProcedure):
     def perform(self):
         print(f"Chek-Up {self.name} conducted by Dr. {self.doctor} on {self.date}.")
 
-
-patient = Patients('Davit',20,["Pneumonia"])
-doctor = Doctors("Dr.Albert",'444-555-1234')
-staff = MedicalStaff('Nurse Grigoryan', 'Registered Nurse')
-
-patient.add_medical_history('Broken arm in 2018')
-doctor.manage_appointment(patient,datetime.now())
-staff.manage_hospital_operations('Admissions')
-
-surgery = Surgery('Appendectomy','Dr. Voskanyan', datetime.now())
-surgery.perform()
-
-checkup = CheckUp('Annual Physical', 'Dr. Gasparyan',datetime.now())
-checkup.perform()
+if __name__ == "__main__":
+    patient = Patients('Davit',20,["Pneumonia"])
+    doctor = Doctors("Dr.Albert",'444-555-1234')
+    staff = MedicalStaff('Nurse Grigoryan', 'Registered Nurse')
+    
+    patient.add_medical_history('Broken arm in 2018')
+    doctor.manage_appointment(patient,datetime.now())
+    staff.manage_hospital_operations('Admissions')
+    
+    surgery = Surgery('Appendectomy','Dr. Voskanyan', datetime.now())
+    surgery.perform()
+    
+    checkup = CheckUp('Annual Physical', 'Dr. Gasparyan',datetime.now())
+    checkup.perform()
 
 
